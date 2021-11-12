@@ -1,5 +1,3 @@
-/*Fonts*/
-
 @import url('https://fonts.googleapis.com/css2?family=KoHo:wght@200;300;400;500;600;700&display=swap');
 
 @font-face {
@@ -16,7 +14,7 @@
   box-sizing:border-box}
 
 div{
-  border: 0px solid #000 !important;}
+  border: 0px solid #000;}
 
 :root {
   --white: #fff;
@@ -37,101 +35,79 @@ color: rgb(0, 0, 0);
 text-shadow: 0px 0px 0px #000,0px 0px 0px #000,0px 0px 0px #000;
 background: rgba(255, 255, 255, 0.63); }
 
-/*footer*/
+/*FOOTER*/
 
 footer{
-  height: 78vh;
-  border: 0px solid #000;
+  background-image: url(../images/bg.jpg);
+  background-size: cover;
+  width: 100%;
+  -webkit-mask-image: url(../images/bg-footer.svg);
+  mask-image: url(../images/bg-footer.svg);
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  border:0px solid #000;
+}
+
+.footer{
+  width: 100%;
   position: relative;
-  overflow: hidden;
+  border: 0px solid rgb(255, 0, 0);
 }
 
 .footer1{
   background-image: url(../images/bg.jpg);
   background-size: cover;
-  height: 48vh;
   width: 100%;
+  height: 20vh;
   -webkit-mask-image: url(../images/bg-footer2.svg);
   mask-image: url(../images/bg-footer2.svg);
   -webkit-mask-size: cover;
   mask-size: cover;
-  z-index: 10;
-  position: absolute;
+  z-index: 29;
   opacity: 1;
   filter: blur(100px);
+  position: absolute;
+  top: -10vh;
+  border: 0px solid rgb(0, 26, 255);
 }
 
 .footer2{
-    background-image: url(../images/bg.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    height: 48vh;
-    width: 100%;
-    -webkit-mask-image: url(../images/bg-footer3.svg);
-    mask-image: url(../images/bg-footer3.svg);
-    -webkit-mask-size: cover;
-    mask-size: cover;
-    z-index: 10;
-    position: absolute;
-    opacity: 0;
-    filter: blur(100px);
+  height: 8vh;
+  width: 100%;
+  position: absolute;
+  bottom: 0vh;
+  opacity: 1;
+  z-index: 93;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0px solid #000;
 }
 
 .footer3{
-    background-image: url(../images/bg.jpg);
-    background-size: cover;
-    height: 80vh;
-    width: 100%;
-    -webkit-mask-image: url(../images/bg-footer.svg);
-    mask-image: url(../images/bg-footer.svg);
-    -webkit-mask-size: cover;
-    mask-size: cover;
-    z-index: 11;
-    top: 9vh;
-    position: absolute;
-    
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    border: 0px solid #000;
+  background-image: url(../images/bg.jpg);
+  background-size: cover;
+  background-position: top;
+  height: 8vh;
+  width: 100%;
+  z-index: 94;
+  position: absolute;
+  filter: blur(5px);
+  opacity: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .footer4{
   height: 8vh;
   width: 100%;
   position: absolute;
-  bottom: -1vh;
-  opacity: 1;
-  z-index: 93;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.footer5{
-  background-image: url(../images/bg.jpg);
-  background-size: cover;
-  background-position: center;
-  height: 8vh;
-  width: 100%;
-  z-index: 94;
-  position: absolute;
-  filter: blur(5px);
-  bottom: -1vh;
-  opacity: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.footer6{
-  height: 8vh;
-  width: 100%;
-  position: absolute;
-  bottom: -1vh;
   opacity: 1;
   z-index: 95;
   display: flex;
@@ -139,15 +115,9 @@ footer{
   justify-content: center;
 }
 
-.footer p{
-  color: rgb(0, 0, 0);
-}
-
 .icon_footer{
   color: rgba(0, 0, 0, 0.473);
   margin: 0px 15px 0px 15px;
-  top: -1vh;
-  position: relative;
   -webkit-transition: all .5s ease;
   -moz-transition: all .5s ease;
   -o-transition: all .5s ease;
@@ -162,7 +132,7 @@ footer{
   transition: all .5s ease;
 }
 
-/*Info*/
+/*INFO-CONTAINER*/
 
 .info__container{
   width: 70%;
@@ -170,6 +140,8 @@ footer{
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 13vh;
+  margin-bottom: 15vh;
 }
 
 /*Form*/
@@ -187,7 +159,7 @@ footer{
   align-items: center;
 }
 
-.form input, .form textarea{
+.form input{
   font-size: 18px;    
   font-weight: 500;
   font-family: 'KoHo', sans-serif;
@@ -205,7 +177,7 @@ footer{
   transition: all .5s ease;
 }
 
-.form input:focus, .form textarea:focus{
+.form input:focus{
 background: linear-gradient(to bottom,transparent,rgba(17, 17, 17, 0.034));
 outline: none;
 border-bottom: 2px solid var(--color4);
@@ -219,103 +191,19 @@ transition: all .5s ease;
   height: 10vh;
 }
 
-.form button{
-  height: 40px;
-  width: 30%;
-  margin-top: 30px;
-  font-size: 15px;
-  color: var(--color4);
-  background-color: var(--color2);    
-  text-shadow: 1px 1px 2px #777;
-  cursor: pointer;
-}
-
 /*Buttom*/
-
-button.animated-button:link, button.animated-button:visited{
-  position: relative;
-  display: block;
-  margin: 30px auto 0;
-  padding: 14px 15px;
-  color: #fff;
-  font-size:14px;
-  font-weight: bold;
-  text-align: center;
-  text-decoration: none;
-  text-transform: uppercase;
-  overflow: hidden;
-  letter-spacing: .08em;
-  border-radius: 30px;
-  text-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(0, 0, 0, 0.2);
-  -webkit-transition: all 1s ease;
-  -moz-transition: all 1s ease;
-  -o-transition: all 1s ease;
-  transition: all 1s ease;
-}
-
-button.animated-button:link:after, button.animated-button:visited:after{
-  content: "";
-  position: absolute;
-  height: 0%;
-  left: 50%;
-  top: 50%;
-  width: 150%;
-  z-index: -1;
-  -webkit-transition: all 0.75s ease 0s;
-  -moz-transition: all 0.75s ease 0s;
-  -o-transition: all 0.75s ease 0s;
-  transition: all 0.75s ease 0s;
-  border-radius: 30px;
-}
-
-button.animated-button:link:hover, button.animated-button:visited:hover{
-  color: #FFF;
-  text-shadow: none;
-  border-radius: 30px;
-}
-
-button.animated-button:link:hover:after, button.animated-button:visited:hover:after{
-  height: 450%;
-  border-radius: 30px;
-}
-
-button.animated-button:link, button.animated-button:visited{
-  position: relative;
-  display: block;
-  margin: 20px auto 0;
-  padding: 12px 7px;
-  color: #fff;
-  font-size:14px;
-  border-radius: 30px;
-  font-weight: bold;
-  text-align: center;
-  text-decoration: none;
-  text-transform: uppercase;
-  overflow: hidden;
-  letter-spacing: .08em;
-  text-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(0, 0, 0, 0.2);
-  -webkit-transition: all 1s ease;
-  -moz-transition: all 1s ease;
-  -o-transition: all 1s ease;
-  transition: all 1s ease;  border-radius: 200px;
-}
-
-.sent{
-  border-radius: 30px;
-  border: 10px solid #000;
-}
-
-/* --Victoria Button_4-- */
 
 button.animated-button.thar-three{
   width: 200px;
+  height: 40px;
+  margin-top: 30px;
   border-radius: 30px;
   color: #ffffff;
   font-weight: 800;
   font-size: 14px;
   font-family: 'KoHo', sans-serif;
   letter-spacing: 1px;
-  cursor: pointer;
+  cursor: normal;
   display: block;
   position: relative;
   border: 2px solid #F7CA18;
@@ -384,22 +272,7 @@ button.animated-button.thar-three:before{
 
 /*RESPONSIVE*/
 
-@media screen and (max-width: 1220px){ 
-  footer{
-    height: 109vh;
-}
-  
-.footer{
-    height: 100vh;
-}
-
-.footer3{
-    height: 100vh;
-}
-
-.footer5{
-      background-position: top;
-}
+@media screen and (max-width: 1200px){ 
   
 .info__container--form{
       width: 70%;
@@ -408,7 +281,11 @@ button.animated-button.thar-three:before{
   
 .info__container--description{
       width: 90%;
-      margin-bottom: 9vh;
+      margin-bottom: 3vh;
+}
+
+.description__title{
+  margin: -40px 20px 20px 10px;
 }
   
 .info__container{
@@ -421,13 +298,13 @@ button.animated-button.thar-three:before{
 
 @media screen and (max-width: 800px){
 
-.footer5{
-    background-position: top;
-}
-
 .info__container--form{
     width: 100%;
     margin-bottom: 0vh;
+}
+
+.form input{
+  margin-bottom: 0vh;
 }
 
 .info__container--description{
@@ -444,5 +321,23 @@ button.animated-button.thar-three:before{
 
 .description__text{
   width: 100%;
+}
+}
+
+@media screen and (max-width: 800px) and (orientation: landscape){
+
+.info__container{
+  margin-top: 28vh;
+}
+}
+
+@media screen and (max-width: 350px){
+
+.description__text{
+  width: 80%;
+}
+
+.direccion{
+  display: none;
 }
 }
